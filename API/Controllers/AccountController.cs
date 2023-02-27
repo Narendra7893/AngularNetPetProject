@@ -44,9 +44,7 @@ namespace API.Controllers
             {
                 UserName = registerDto.UserName.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
-                PasswordSalt = hmac.Key,
-                Email = registerDto.Email
-
+                PasswordSalt = hmac.Key
             };
            await _Context.Users.AddAsync(user);
            await _Context.SaveChangesAsync();
