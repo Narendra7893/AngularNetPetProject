@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { member } from 'src/app/_models/Member';
+import { Member } from 'src/app/_models/member';
 import { MembersService } from 'src/app/_services/members.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { MembersService } from 'src/app/_services/members.service';
   styleUrls: ['./member-list.component.css']
 })
 export class MemberListComponent implements OnInit {
-  members : member[] = [];
+  members : Member[] = [];
   constructor(private memberService : MembersService) { }
 
   ngOnInit(): void {

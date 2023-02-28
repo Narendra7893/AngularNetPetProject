@@ -1,6 +1,6 @@
-import { photo } from "./photo";
+import { Photo } from "./photo";
 
-    export interface member {
+    export interface Member {
         id: number;
         userName: string;
         photoUrl: string;
@@ -14,7 +14,7 @@ import { photo } from "./photo";
         interests: string;
         city: string;
         country: string;
-        photos: photo[];
+        photos: Photo[];
     }
 
 
